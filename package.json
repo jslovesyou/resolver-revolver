@@ -1,6 +1,6 @@
 {
   "name": "resolver-revolver",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Resolves and validates configurations.",
   "main": "index.js",
   "repository": {
@@ -8,17 +8,31 @@
     "url": "https://github.com/jslovesyou/resolver-revolver.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "test": "gulp test"
   },
   "author": "JP Wesselink <jpwesselink@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^3.10.1",
-    "validator": "^4.0.5"
+    "lodash.every": "^3.2.3",
+    "lodash.first": "^3.0.0",
+    "lodash.isarray": "^3.0.4",
+    "lodash.isfunction": "^3.0.6",
+    "lodash.isnumber": "^3.0.1",
+    "lodash.isobject": "^3.0.2",
+    "lodash.isstring": "^3.0.1",
+    "lodash.isundefined": "^3.0.1",
+    "lodash.merge": "^3.3.2",
+    "lodash.negate": "^3.0.1"
   },
   "devDependencies": {
     "eslint": "^1.5.0",
+    "expect.js": "^0.3.1",
+    "gulp": "^3.9.0",
+    "gulp-commonjs-tasks": "^1.2.0",
+    "gulp-istanbul": "^0.10.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-util": "^3.0.6",
+    "validator": "^4.0.5",
     "yargs": "^3.25.0"
   }
 }

@@ -10,10 +10,10 @@ Since that is pretty generic, here's an example.
 'use strict';
 
 var argv = require('yargs').argv;
-var negate = require('lodash/function/negate');
+var negate = require('lodash.negate');
 var resolverRevolver = require('../index');
 var validator = require('validator');
-var isUndefined = require('lodash/lang/isUndefined');
+var isUndefined = require('lodash.isundefined');
 var isDefined = negate(isUndefined);
 
 var validate = resolverRevolver.parse({
