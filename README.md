@@ -1,7 +1,12 @@
 # resolver-revolver
 
+Use as your own risk, this is a work in progress. It does exactly what it should
+do for my current project, _and nothing more_.
+
 Resolves values from and validates by trying to find values in given contexts.
 Since that is pretty generic, here's an example.
+
+
 
 ```js
 'use strict';
