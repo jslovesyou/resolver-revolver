@@ -1,0 +1,15 @@
+node_modules
+bower_components
+npm-debug.log
+coverage
+mocha*
+src/logs/*
+logs/*
+History.md
+dist/
+examples
+example*
+lame*
+netjes*
+ok*
+pebkac.js
