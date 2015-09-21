@@ -16,26 +16,26 @@ var negate = require('lodash/function/negate');
 var resolverRevolver = require('../index');
 var validator = require('validator');
 var isUndefined = require('lodash/lang/isUndefined');
-
-var validationContext = {
-  process: {
-    env: process.env
-  },
-  argv: argv
-};
+var isDefined = negate(isUndefined);
 
 var validate = resolverRevolver.parse({
-  context: validationContext,
+  console: console,
+  context: {
+    process: {
+      env: process.env
+    },
+    argv: argv
+  },
   resolvables: {
     'bah': {
       from: ['argv.bah', 'argv.hi'],
-      preconditions: [negate(isUndefined), validator.isNumeric]
+      preconditions: [isDefined, validator.isNumeric]
     },
     'bar': {
       from: ['argv.bar', 'argv.barbar', 9000],
       preconditions: [{
         name: 'is defined',
-        fn: negate(isUndefined)
+        fn: isDefined
       }, {
         name: 'validator.isNumeric',
         fn: validator.isNumeric
@@ -51,11 +51,12 @@ var validate = resolverRevolver.parse({
       }, 'argv.foofoo', 9000],
       preconditions: [{
         name: 'is defined',
-        fn: negate(isUndefined)
+        fn: isDefined
       }, {
         name: 'is numeric',
         fn: validator.isNumeric
-      }]
+      }],
+      throwOnFail: true
     }
   }
 });
@@ -71,6 +72,7 @@ var defaults = {
 };
 
 console.log(JSON.stringify(defaults, null, 4));
+
 ```
 
 ```bash
@@ -84,4 +86,24 @@ console.log(JSON.stringify(defaults, null, 4));
     }
 }
 
+```
+
+
+## Configuration of `.parse`
+
+Defaults to empty functions, can be overwritten with `console` or your own logger.
+
+```js
+{
+  console: {
+    info: function(){},
+    warn: function(){},
+    error: function(){}
+  }
+}
+```
+```js
+{
+  console: console
+}
 ```
