@@ -1,5 +1,6 @@
 # resolver-revolver
 [ ![Codeship Status for sytac/gulp-commonjs-tasks](https://codeship.com/projects/fbd845d0-42d7-0133-683e-1e375ee071eb/status?branch=master)](https://codeship.com/projects/103903)
+[![Coverage Status](https://coveralls.io/repos/jslovesyou/resolver-revolver/badge.svg?branch=master&service=github)](https://coveralls.io/github/jslovesyou/resolver-revolver?branch=master)
 
 Use as your own risk, this is a work in progress. It does exactly what it should
 do for my current project, _and nothing more_.
