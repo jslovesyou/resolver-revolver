@@ -6,8 +6,6 @@ do for my current project, _and nothing more_.
 Resolves values from and validates by trying to find values in given contexts.
 Since that is pretty generic, here's an example.
 
-
-
 ```js
 'use strict';
 
@@ -88,10 +86,10 @@ console.log(JSON.stringify(defaults, null, 4));
 
 ```
 
-
 ## Configuration of `.parse`
 
-Defaults to empty functions, can be overwritten with `console` or your own logger.
+Defaults to empty functions, can be overwritten with `console` or your own
+logger.
 
 ```js
 {
@@ -102,6 +100,7 @@ Defaults to empty functions, can be overwritten with `console` or your own logge
   }
 }
 ```
+
 ```js
 {
   console: console
