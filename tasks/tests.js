@@ -22,7 +22,7 @@ module.exports = function (gulp) {
       fn: mochaRunner,
       description: 'Run unit test',
       options: {
-        '--watch, -w': 'Watch for changes'
+        '-w, --watch': 'Watch for changes and run tests again'
       }
     }
   };

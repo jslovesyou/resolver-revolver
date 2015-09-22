@@ -7,6 +7,5 @@ src/logs/*
 logs/*
 History.md
 dist/
-examples
-example*
+.examples
 reports
