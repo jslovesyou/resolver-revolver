@@ -181,6 +181,28 @@ Resolved environment from default value to development
 
 ```
 
+## Configuration
+
+```js
+{
+  // will output to console using .info and .error
+  // you can provide your own logger here if need be
+  // defaults to undefined, which means no logging
+  console: {
+    info : function(){},
+    error : function(){}
+  },
+  // Icons for logging
+  icons: {
+    results: {
+      valid: '✔',
+      inValid: '✖',
+      firstValidResultPrefix: '✊'
+    }
+  }
+}
+```
+
 ## Running tests
 
 ```bash
