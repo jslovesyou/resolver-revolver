@@ -199,6 +199,11 @@ Resolved environment from default value to development
       inValid: '✖',
       firstValidResultPrefix: '✊'
     }
+  },
+  resolvables : {
+    {resolvable name} : {
+      from : []
+    }
   }
 }
 ```
