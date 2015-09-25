@@ -45,8 +45,8 @@ var defaults = {
 
 console.log(JSON.stringify(defaults, null, 4));
 
-``` -->
+```
 
-```bash
+```zsh
 $ node examples/defaults
 ```

@@ -2,7 +2,7 @@
 
 [![Codeship Status for sytac/gulp-commonjs-tasks](https://codeship.com/projects/fbd845d0-42d7-0133-683e-1e375ee071eb/status?branch=master)](https://codeship.com/projects/103903)
 
-![revolver](https://cloud.githubusercontent.com/assets/1814479/10023500/bad1db20-6152-11e5-8bfd-731c91466b8b.png)
+![guns-307948_1280](https://cloud.githubusercontent.com/assets/1814479/10014988/8cb934fc-611d-11e5-980f-94714994200b.png =250x)
 
 ## Description
 
@@ -11,7 +11,7 @@ a lazy way.
 
 ## Installation
 
-```bash
+```zsh
 $ npm install --save resolver-revolver
 ```
 
@@ -56,7 +56,7 @@ console.log(JSON.stringify(defaults, null, 4));
 Since `argv.NODE_ENV` and `env.NODE_ENV` can not be resolved round-robin style,
 the `default` will be resolved.
 
-```bash
+```zsh
 $ node examples/easy
 {
     "environment": "development"
@@ -67,7 +67,7 @@ $ node examples/easy
 
 Since the first
 
-```bash
+```zsh
 $ node examples/easy --NODE_ENV=production
 {
     "environment": "production"
@@ -76,7 +76,7 @@ $ node examples/easy --NODE_ENV=production
 
 **Export a system variable**
 
-```bash
+```zsh
 $ export NODE_ENV=coocoo
 $ node examples/easy                           
 {
@@ -89,7 +89,7 @@ $ node examples/easy
 Since `argv.NODE_ENV` has a higher priority than `env.NODE_ENV`,
 it will be resolved.
 
-```bash
+```zsh
 $ export NODE_ENV=coocoo
 $ node examples/easy --NODE_ENV=production                          
 {
@@ -159,7 +159,7 @@ console.log(JSON.stringify(defaults, null, 4));
 
 ```
 
-```bash
+```zsh
 $ unset NODE_ENV
 $ node examples/elaborate --NODE_ENV asdasd
 Resolving: environment
@@ -181,36 +181,9 @@ Resolved environment from default value to development
 
 ```
 
-## Configuration
-
-```js
-{
-  // will output to console using .info and .error
-  // you can provide your own logger here if need be
-  // defaults to undefined, which means no logging
-  console: {
-    info : function(){},
-    error : function(){}
-  },
-  // Icons for logging
-  icons: {
-    results: {
-      valid: '✔',
-      inValid: '✖',
-      firstValidResultPrefix: '✊'
-    }
-  },
-  resolvables : {
-    {resolvable name} : {
-      from : []
-    }
-  }
-}
-```
-
 ## Running tests
 
-```bash
+```zsh
 $ gulp test
 ```
 

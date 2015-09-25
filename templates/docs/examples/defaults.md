@@ -2,8 +2,8 @@
 
 ## Setting a default fallback value
 
-<%= examples.defaults.index %> -->
+<%= examples.defaults.index %>
 
-```bash
+```zsh
 $ node examples/defaults
 ```

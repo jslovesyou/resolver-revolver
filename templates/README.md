@@ -11,7 +11,7 @@ a lazy way.
 
 ## Installation
 
-```bash
+```zsh
 $ npm install --save resolver-revolver
 ```
 
@@ -28,7 +28,7 @@ it will set it to a default of `development`.
 Since `argv.NODE_ENV` and `env.NODE_ENV` can not be resolved round-robin style,
 the `default` will be resolved.
 
-```bash
+```zsh
 $ node examples/easy
 {
     "environment": "development"
@@ -39,7 +39,7 @@ $ node examples/easy
 
 Since the first
 
-```bash
+```zsh
 $ node examples/easy --NODE_ENV=production
 {
     "environment": "production"
@@ -48,7 +48,7 @@ $ node examples/easy --NODE_ENV=production
 
 **Export a system variable**
 
-```bash
+```zsh
 $ export NODE_ENV=coocoo
 $ node examples/easy                           
 {
@@ -61,7 +61,7 @@ $ node examples/easy
 Since `argv.NODE_ENV` has a higher priority than `env.NODE_ENV`,
 it will be resolved.
 
-```bash
+```zsh
 $ export NODE_ENV=coocoo
 $ node examples/easy --NODE_ENV=production                          
 {
@@ -73,7 +73,7 @@ Savvy? Here's a more elaborate example.
 
 <%= examples.elaborate.index %>
 
-```bash
+```zsh
 $ unset NODE_ENV
 $ node examples/elaborate --NODE_ENV asdasd
 Resolving: environment
@@ -97,7 +97,7 @@ Resolved environment from default value to development
 
 ## Running tests
 
-```bash
+```zsh
 $ gulp test
 ```
 
