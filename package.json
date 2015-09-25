@@ -1,6 +1,6 @@
 {
   "name": "resolver-revolver",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Resolves and validates configurations.",
   "main": "index.js",
   "repository": {
