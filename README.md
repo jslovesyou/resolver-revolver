@@ -2,7 +2,7 @@
 
 [![Codeship Status for sytac/gulp-commonjs-tasks](https://codeship.com/projects/fbd845d0-42d7-0133-683e-1e375ee071eb/status?branch=master)](https://codeship.com/projects/103903)
 
-![guns-307948_1280](https://cloud.githubusercontent.com/assets/1814479/10014988/8cb934fc-611d-11e5-980f-94714994200b.png)
+![revolver](https://cloud.githubusercontent.com/assets/1814479/10023500/bad1db20-6152-11e5-8bfd-731c91466b8b.png)
 
 ## Description
 
@@ -112,18 +112,25 @@ var isDefined = negate(isUndefined);
 
 var resolved = resolverRevolver.parse({
   // Add a console for logging
+  // defaults to undefined
   console: console,
 
   // Our context
+  // defaults to {}
   context: {
     argv: argv,
     env: process.env
   },
 
+  // when set to true it returns the default without validating
+  lenientDefaults: false,
+
   // Resolvables
   resolvables: {
     'environment': {
+      // defaults to []
       from: ['argv.NODE_ENV', 'env.NODE_ENV'],
+      // defaults to undefined
       default: 'development',
 
       // And preconditions. If you do not set this array, it will default to
@@ -137,6 +144,7 @@ var resolved = resolverRevolver.parse({
       // }
       //
       // Let's add our own here
+      // defaults to []
       preconditions: [{
         fn: isDefined,
         name: 'is defined'

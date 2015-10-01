@@ -8,18 +8,25 @@ var isDefined = negate(isUndefined);
 
 var resolved = resolverRevolver.parse({
   // Add a console for logging
+  // defaults to undefined
   console: console,
 
   // Our context
+  // defaults to {}
   context: {
     argv: argv,
     env: process.env
   },
 
+  // when set to true it returns the default without validating
+  lenientDefaults: false,
+
   // Resolvables
   resolvables: {
     'environment': {
+      // defaults to []
       from: ['argv.NODE_ENV', 'env.NODE_ENV'],
+      // defaults to undefined
       default: 'development',
 
       // And preconditions. If you do not set this array, it will default to
@@ -33,6 +40,7 @@ var resolved = resolverRevolver.parse({
       // }
       //
       // Let's add our own here
+      // defaults to []
       preconditions: [{
         fn: isDefined,
         name: 'is defined'
